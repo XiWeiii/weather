@@ -1,2 +1,15 @@
+#自定义
 weather:
   api: http://t.weather.sojson.com/api/weather/city/
+
+#Redis
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 8
+        min-idle: 2
+        max-wait: -1ms
+    timeout: 5000000ms
