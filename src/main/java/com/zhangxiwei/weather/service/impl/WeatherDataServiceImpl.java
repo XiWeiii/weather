@@ -47,6 +47,12 @@ public class WeatherDataServiceImpl implements WeatherDataService {
         return getWeatherData(url);
     }
 
+    @Override
+    public void syncWeatherDataByCityId(String cityId) {
+        String url = weatherProperty.getApi() + cityId;
+        getWeatherData(url);
+    }
+
     /**
      * 通过天气接口获取天气信息
      *
